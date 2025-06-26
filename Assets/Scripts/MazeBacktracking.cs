@@ -16,6 +16,9 @@ public class MazeBacktracking : MonoBehaviour
     public int maxWidth = 21;
     public int maxHeight = 21;
 
+    [Header("탐색 속도")]
+    [SerializeField] private float speed = 0.1f;
+
     [Header("이미지 그룹")]
     [SerializeField] private List<GridGroup> gridGroup;
 
@@ -80,7 +83,7 @@ public class MazeBacktracking : MonoBehaviour
                 mazes[wallY][wallX] = ImageStatus.Road;
                 gridGroup[wallY].SetColor(wallX, ImageStatus.Road);
 
-                yield return new WaitForSeconds(0.25f);
+                yield return new WaitForSeconds(speed);
 
                 ShowMaze();
 
