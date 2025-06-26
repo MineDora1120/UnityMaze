@@ -10,7 +10,7 @@ public class GridGroup : MonoBehaviour
         _imageGrids = GetComponentsInChildren<ImageGrid>(true);
     }
 
-    public void SetImage(int index, ImageStatus status)
+    public void SetColor(int index, ImageStatus status)
     {
         _imageGrids[index].SetImage(status);
     }

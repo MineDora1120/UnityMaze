@@ -8,7 +8,7 @@ public class ImageGrid : MonoBehaviour
     public ImageStatus _status;
 
     [Header("이미지 설정")]
-    public Sprite[] sprites;
+    public Color[] colors;
 
     private void Start()
     {
@@ -19,7 +19,7 @@ public class ImageGrid : MonoBehaviour
     {
         if (_spr != null)
         {
-            _spr.sprite = sprites[(int)index];
+            _spr.color = colors[(int)index];
             _status = index;
         }
     }
